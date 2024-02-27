@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Your Page Title</title>
+        <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js"></script>
+        <script>
+            var firebaseConfig = {
+                apiKey: "AIzaSyBxmV3s4Zkt03d_CzVPwsPZyIWw2FNzp2M",
+                authDomain: "hackathon-reg.firebaseapp.com",
+                projectId: "hackathon-reg",
+                storageBucket: "hackathon-reg.appspot.com",
+                messagingSenderId: "1059111594581",
+                appId: "1:1059111594581:web:5bbb0d6b38aef8fa4002dc"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+        </script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    </head>
+    <body>
+
+        <div class="wrapper">
+            <form action="" id="registrationForm">
+                <h1>Hackathon Registration</h1>
+                <div class="input-box">
+                    <div class="input-field">
+                        <input type="text" placeholder="Full Name" required>
+                        <i name='user' type='solid' ></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="College Name" required>
+                        <box-icon name='home' type='solid' ></box-icon>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <div class="input-field">
+                        <input type="text" placeholder="Department" required>
+                        <box-icon type='solid' name='graduation'></box-icon>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Year" required>
+                        <box-icon type='solid' name='calendar'></box-icon>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <div class="input-field">
+                        <input type="number" placeholder="Mobile Number" required>
+                        <box-icon type='solid' name='phone'></box-icon>
+                    </div>
+                    <div class="input-field">
+                        <input type="email" placeholder="E-Mail Address" required>
+                        <box-icon type='solid' name='envelope'></box-icon>
+                    </div>
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </div>
+    </body>
+</html>
