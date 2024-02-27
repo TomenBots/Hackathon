@@ -10,11 +10,8 @@ COPY . /app
 # Install any needed packages specified in requirements.txt
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
-# Make port 5000 available to the world outside this container
+# Expose port 5000 for Gunicorn
 EXPOSE 5000
 
-# Define environment variable
-ENV NAME World
-
-# Run app.py when the container launches
-CMD ["python", "app.py"]
+# Specify Gunicorn as the entry point
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:5000", "app:app"]
